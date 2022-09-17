@@ -1,0 +1,7 @@
+.DS_Store
+custom-scripts
+nvim
+
+fish/fish_variables
+
+karabiner/automatic_backups
