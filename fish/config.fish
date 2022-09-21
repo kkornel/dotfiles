@@ -103,3 +103,8 @@ abbr yb "yarn build"
 abbr yd "yarn dev"
 abbr ye "yarn e2e"
 abbr yt "yarn test"
+
+# pnpm
+set -gx PNPM_HOME "/Users/kornel/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end

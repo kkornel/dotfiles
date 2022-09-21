@@ -1,7 +1,6 @@
 .DS_Store
 custom-scripts
-nvim
-
+nvim/plugin
 fish/fish_variables
 
 karabiner/automatic_backups

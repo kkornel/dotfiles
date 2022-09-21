@@ -1,0 +1,12 @@
+-- vim.g.ale_enabled = 1
+-- vim.g.ale_fixers = {
+--   html = {'prettier', 'eslint'},
+--   css = {'prettier', 'eslint'},
+--   javascript = {'prettier', 'eslint'},
+--   typescript = {'prettier', 'eslint'},
+--   lua = {'prettier', 'eslint'},
+--   json = {'prettier', 'eslint'},
+-- }
+-- vim.g.ale_fix_on_save = 1
+-- vim.g.ale_completion_enabled = 1
+-- vim.g.ale_javascript_prettier_options = '--single-quote --trailing-comma all'

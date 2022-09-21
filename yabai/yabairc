@@ -46,7 +46,7 @@ yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
 # yabai -m rule --add app="^Finder$" manage=off
-# yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
 
 # Space labeling
 yabai -m space 1 --label I
@@ -68,6 +68,6 @@ yabai -m space 10 --label X
 # yabai -m signal --add event=window_destroyed action="bash /Users/kornel/.config/custom-scripts/window-focus-on-destroy.sh"
 
 # When Menu Bar hidden and using SpaceBar or SimpleBar
-yabai -m config external_bar all:27:0
+# yabai -m config external_bar all:27:0
 
 echo "yabai configuration loaded.."
