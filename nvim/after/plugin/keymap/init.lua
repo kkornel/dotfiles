@@ -81,3 +81,15 @@ nnoremap('<leader>cd', '<cmd>Lspsaga show_line_diagnosctics<CR>')
 nnoremap('K', '<cmd>Lspsaga hover_doc<CR>')
 nnoremap('<leader>lt', '<cmd>vim.lsp.buf.type_definition()<cr>')
 nnoremap('<leader>lr', '<cmd>vim.lsp.buf.references()<cr>')
+-- Diagnsotic jump can use `<c-o>` to jump back
+nnoremap("[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+nnoremap("]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+
+-- -- Only jump to error
+-- keymap("n", "[E", function()
+--   require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
+-- end, { silent = true })
+-- keymap("n", "]E", function()
+--   require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
+-- end, { silent = true })
+
