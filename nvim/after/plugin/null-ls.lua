@@ -1,6 +1,7 @@
 local null_ls = require('null-ls')
 
 local formatting = null_ls.builtins.formatting
+local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
 null_ls.setup {
   sources = {
@@ -38,5 +39,12 @@ null_ls.setup {
     -- if client.server_capabilities.documentRangeFormattingProvider then
     --   vim.cmd("xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting({})<CR>")
     -- end
+    vim.cmd [[
+      augroup document_highlight
+        autocmd! * <buffer>
+        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
+    ]]
   end
 }
