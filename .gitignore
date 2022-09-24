@@ -1,6 +1,6 @@
 .DS_Store
 custom-scripts
-nvim/plugin
+packer_compiled.lua
 fish/fish_variables
 
 karabiner/automatic_backups

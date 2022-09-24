@@ -13,16 +13,14 @@ nnoremap('K', '5k')
 -- Greates remap ever
 xnoremap('<leader>p', '\"dP')
 
-nnoremap('<leader>y', '\"+y')
-vnoremap('<leader>y', '\"+y')
 nnoremap('<leader>d', '\"_d')
 vnoremap('<leader>d', '\"_d')
 
 nnoremap('Y', 'yg$')
 
-nnoremap('<leader>f', function()
-    vim.lsp.buf.format()
-end)
+-- nnoremap('<leader>f', function()
+--     vim.lsp.buf.format()
+-- end)
 
 -- Select all
 nnoremap('<leader>A', 'gg<S-v>G')
@@ -64,8 +62,8 @@ nnoremap('<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
 nnoremap('<leader>e', ':NvimTreeToggle<CR>')
 -- nnoremap('<leader>q', ':NvimTreeFocus<CR>')
 
-nnoremap('<leader>[', ':BufferLineCyclePrev<CR>')
-nnoremap('<leader>]', ':BufferLineCycleNext<CR>')
+nnoremap('<Tab>', ':BufferLineCycleNext<CR>')
+nnoremap('<S-Tab>', ':BufferLineCyclePrev<CR>')
 
 nnoremap('<leader>q', ':q<CR>')
 nnoremap('<leader>Q', ':q!<CR>')
@@ -77,8 +75,9 @@ nnoremap('<leader>ca', '<cmd>Lspsaga code_action<CR>')
 nnoremap('gr', '<cmd>Lspsaga rename<CR>')
 -- <C-t> to jump back
 nnoremap('gd', '<cmd>Lspsaga peek_definition<CR>')
+nnoremap('gp', '<cmd>Lspsaga preview_definition<CR>')
 nnoremap('<leader>cd', '<cmd>Lspsaga show_line_diagnosctics<CR>')
-nnoremap('K', '<cmd>Lspsaga hover_doc<CR>')
+nnoremap('<leader>k', '<cmd>Lspsaga hover_doc<CR>')
 nnoremap('<leader>lt', '<cmd>vim.lsp.buf.type_definition()<cr>')
 nnoremap('<leader>lr', '<cmd>vim.lsp.buf.references()<cr>')
 -- Diagnsotic jump can use `<c-o>` to jump back
@@ -92,4 +91,3 @@ nnoremap("]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
 -- keymap("n", "]E", function()
 --   require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
 -- end, { silent = true })
-

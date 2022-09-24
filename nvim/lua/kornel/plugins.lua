@@ -26,6 +26,7 @@ return packer.startup(function(use)
 
   -- Formatters
   use 'MunifTanjim/prettier.nvim'
+  -- use 'dense-analysis/ale'
 
   use 'windwp/nvim-autopairs'
   use 'terrortylor/nvim-comment'
@@ -45,7 +46,7 @@ return packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
   use 'p00f/nvim-ts-rainbow'
-  use 'lukas-reineke/indent-blankline.nvim'
+  -- use 'lukas-reineke/indent-blankline.nvim'
   use 'folke/trouble.nvim'
   use 'windwp/nvim-ts-autotag'
   use 'folke/lsp-colors.nvim'

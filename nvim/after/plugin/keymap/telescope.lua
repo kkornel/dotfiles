@@ -29,7 +29,7 @@ nnoremap(';r', function()
   builtin.live_grep()
 end)
 
-nnoremap('sf', ':Telescope file_browser<CR>') 
+nnoremap('sf', ':Telescope file_browser<CR>')
 
 -- local function telescope_buffer_dir()
   -- return vim.fn.expand('%:p:h')
@@ -44,4 +44,3 @@ nnoremap('af', function()
     layout_config = { height = 40 }
   })
 end)
- 

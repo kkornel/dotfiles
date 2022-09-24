@@ -23,4 +23,5 @@ require('lualine').setup {
   },
   tabline = {},
   winbar = {},
+  extensions = { 'fugitive' }
 }

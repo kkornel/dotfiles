@@ -2,14 +2,9 @@ vim.g.catppuccin_flavour = 'mocha' -- latte, frappe, macchiato, mocha
 
 require('catppuccin').setup {
   integrations = {
-      indent_blankline = {
+    indent_blankline = {
       enabled = true,
       colored_indent_levels = false,
-    },
-    neotree = {
-      enabled = true,
-      show_root = true, -- makes the root folder not transparent
-      transparent_panel = false, -- make the panel transparent
     },
     native_lsp = {
       enabled = true,
