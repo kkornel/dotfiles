@@ -33,3 +33,9 @@ vim.opt.updatetime = 50
 -- Disable various builtin plugins in Vim that bog down speed
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.filetype.add({
+    extension = {
+        astro = "astro"
+    }
+})

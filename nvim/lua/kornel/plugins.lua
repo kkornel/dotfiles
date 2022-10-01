@@ -10,7 +10,8 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'nvim-lua/plenary.nvim'
-
+  use 'virchau13/tree-sitter-astro'
+  use 'wuelnerdotexe/vim-astro'
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -38,6 +39,7 @@ return packer.startup(function(use)
 
   use 'nvim-lualine/lualine.nvim'
   use 'akinsho/nvim-bufferline.lua'
+  -- use 'romgrk/barbar.nvim'
   use 'kyazdani42/nvim-tree.lua'
 
   -- Highlighting
@@ -51,6 +53,7 @@ return packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use 'folke/lsp-colors.nvim'
   use 'norcalli/nvim-colorizer.lua'
+  -- use 'andymass/vim-matchup'
 
   -- Git
   use 'dinhhuy258/git.nvim' -- vim-fugitive written in Lua

@@ -75,7 +75,6 @@ nnoremap('<leader>ca', '<cmd>Lspsaga code_action<CR>')
 nnoremap('gr', '<cmd>Lspsaga rename<CR>')
 -- <C-t> to jump back
 nnoremap('gd', '<cmd>Lspsaga peek_definition<CR>')
-nnoremap('gp', '<cmd>Lspsaga preview_definition<CR>')
 nnoremap('<leader>cd', '<cmd>Lspsaga show_line_diagnosctics<CR>')
 nnoremap('<leader>k', '<cmd>Lspsaga hover_doc<CR>')
 nnoremap('<leader>lt', '<cmd>vim.lsp.buf.type_definition()<cr>')
