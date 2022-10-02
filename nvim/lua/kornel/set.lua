@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 vim.opt.title = true
+vim.opt.termguicolors = true
+
+vim.opt.pumheight = 7
 
 vim.opt.nu = true
 vim.opt.relativenumber = true

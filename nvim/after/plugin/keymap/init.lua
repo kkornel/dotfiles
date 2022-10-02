@@ -1,10 +1,16 @@
 local Remap = require('kornel.keymap')
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
+local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
 
 nnoremap('<leader>pv', ':Vex<CR>')
 nnoremap('<leader>pe', ':Ex<CR>')
+
+nnoremap('<leader>s', ':w<CR>')
+
+nnoremap('<leader>q', ':q<CR>')
+nnoremap('<leader>Q', ':q!<CR>')
 
 -- Fast jumping
 nnoremap('J', '5j')
@@ -65,8 +71,22 @@ nnoremap('<leader>e', ':NvimTreeToggle<CR>')
 nnoremap('<Tab>', ':BufferLineCycleNext<CR>')
 nnoremap('<S-Tab>', ':BufferLineCyclePrev<CR>')
 
-nnoremap('<leader>q', ':q<CR>')
-nnoremap('<leader>Q', ':q!<CR>')
+-- Snippets
+inoremap("<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", { silent = true })
+inoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { silent = true })
+
+-- Bufferline
+nnoremap('<leader>1', '<cmd>lua require("bufferline").go_to_buffer(1, true)<cr>', { silent = true })
+nnoremap('<leader>2', '<cmd>lua require("bufferline").go_to_buffer(2, true)<cr>', { silent = true })
+nnoremap('<leader>3', '<cmd>lua require("bufferline").go_to_buffer(3, true)<cr>', { silent = true })
+nnoremap('<leader>4', '<cmd>lua require("bufferline").go_to_buffer(4, true)<cr>', { silent = true })
+nnoremap('<leader>5', '<cmd>lua require("bufferline").go_to_buffer(5, true)<cr>', { silent = true })
+nnoremap('<leader>6', '<cmd>lua require("bufferline").go_to_buffer(6, true)<cr>', { silent = true })
+nnoremap('<leader>7', '<cmd>lua require("bufferline").go_to_buffer(7, true)<cr>', { silent = true })
+nnoremap('<leader>8', '<cmd>lua require("bufferline").go_to_buffer(8, true)<cr>', { silent = true })
+nnoremap('<leader>9', '<cmd>lua require("bufferline").go_to_buffer(9, true)<cr>', { silent = true })
+nnoremap('<leader>$', '<cmd>lua require("bufferline").go_to_buffer(-1, true)<cr>', { silent = true })
+nnoremap('X', ':Bdelete<CR>', { silent = true });
 
 -- lspsaga
 -- <C-t> to jump back

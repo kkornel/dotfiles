@@ -1,17 +1,17 @@
 -- Catppuccin colors
 local function catppucin_it()
-  local mocha = require("catppuccin.palettes").get_palette()
-  local cnf = require("catppuccin.config").options
+  local mocha = require('catppuccin.palettes').get_palette()
+  local cnf = require('catppuccin.config').options
 
   local transparent_background = cnf.transparent_background
-  local active_bg = transparent_background and "NONE" or mocha.base
-  local inactive_bg = transparent_background and "NONE" or mocha.mantle
+  local active_bg = transparent_background and 'NONE' or mocha.base
+  local inactive_bg = transparent_background and 'NONE' or mocha.mantle
   local bg_highlight = (transparent_background and cnf.dim_inactive.enabled and mocha.dim)
-      or (transparent_background and "NONE")
+      or (transparent_background and 'NONE')
       or (cnf.dim_inactive.enabled and mocha.dim)
       or mocha.crust
 
-  local styles = { "bold", "italic" }
+  local styles = { 'bold', 'italic' }
 
   local highlights = {
     -- buffers
@@ -80,7 +80,7 @@ local function catppucin_it()
 
   local user_highlights = {}
   highlights = vim.tbl_deep_extend(
-    "keep",
+    'keep',
     user_highlights[vim.g.catppuccin_flavour] or {},
     user_highlights.all or {},
     highlights
@@ -98,14 +98,29 @@ local function catppucin_it()
   return highlights
 end
 
-require('bufferline').setup({
+require('bufferline').setup {
+  highlights = catppucin_it(),
   options = {
-    mode = 'tabs',
-    separator_style = 'slant',
+  open_on_tab = true,
+    mode = 'buffers',
+    -- mode = 'tabs',
+    -- separator_style = 'slant',
     always_show_bufferline = true,
     show_buffer_close_icons = false,
+    buffer_close_icon = '',
+    modified_icon = '',
+    close_icon = '',
     show_close_icon = false,
-    color_icons = true
+    left_trunc_marker = '',
+    right_trunc_marker = '',
+    color_icons = true,
+    offsets = {
+      {
+        filetype = 'NvimTree',
+        text = 'File Explorer' ,
+        text_align = 'center',
+        separator = false
+      },
+    },
   },
-  highlights = catppucin_it()
-})
+}
