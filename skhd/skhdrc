@@ -11,10 +11,10 @@
 # HYPER === SHIFT + CMD + ALT + OPTION
 
 # Focus window
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+ctrl - h : yabai -m window --focus west
+ctrl - j : yabai -m window --focus south
+ctrl - k : yabai -m window --focus north
+ctrl - l : yabai -m window --focus east
 
 # Swap managed window
 shift + alt - h : yabai -m window --swap west
@@ -67,7 +67,7 @@ shift + ctrl - s : yabai -m window --move rel:0:20
 hyper - q : yabai -m window --close
 
 # Toggle window split type
-alt - e : yabai -m window --toggle split
+hyper - e : yabai -m window --toggle split
 
 # Move active window to the specific space on current display. It doesn't follow.
 ctrl - 1 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "yabai -m window --space 1"
