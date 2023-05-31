@@ -32,13 +32,15 @@ yabai -m config mouse_action1                move
 
 # Spacing 
 yabai -m config layout                       bsp
-yabai -m config top_padding                  12
-yabai -m config bottom_padding               12
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
-yabai -m config window_gap                   12
+# yabai -m config top_padding                  12
+# yabai -m config bottom_padding               12
+# yabai -m config left_padding                 12
+# yabai -m config right_padding                12
+# yabai -m config window_gap                   12
 
 # Diasble resize for those apps 
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="Raycast" manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^Disk Utility$" manage=off
@@ -46,7 +48,8 @@ yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
 # yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^Spotify$" manage=off
+# yabai -m rule --add app="^Spotify$" manage=off
+# yabai -m rule --add app="^Brave$" manage=on
 
 # Space labeling
 yabai -m space 1 --label I
@@ -59,6 +62,8 @@ yabai -m space 7 --label VII
 yabai -m space 8 --label VIII
 yabai -m space 9 --label IX
 yabai -m space 10 --label X
+yabai -m space 11 --label XI
+yabai -m space 12 --label XII
 
 # Limelight - kill it and start it each time Yabai starts
 # killall limelight &>/dev/null

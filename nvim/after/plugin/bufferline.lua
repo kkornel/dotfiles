@@ -99,7 +99,7 @@ local function catppucin_it()
 end
 
 require('bufferline').setup {
-  highlights = catppucin_it(),
+  -- highlights = catppucin_it(),
   options = {
   open_on_tab = true,
     mode = 'buffers',

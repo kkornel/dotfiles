@@ -36,7 +36,8 @@ require 'nvim-tree'.setup {
         file = true,
         folder_arrow = true,
       }
-    }
+    },
+    hide_root_folder = true,
   },
   actions = {
     open_file = {
@@ -53,8 +54,5 @@ require 'nvim-tree'.setup {
   },
   update_focused_file = { enable = true },
   hijack_directories = { enable = true },
-  view = {
-    hide_root_folder = true,
-  },
   open_on_setup = true,
 }

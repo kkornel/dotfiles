@@ -8,12 +8,12 @@ local langservers = {
   'cssls',
   'astro',
   'tsserver',
-  'ls_emmet',
+  'emmet_ls',
   'cssmodules_ls',
   'eslint',
   'jsonls',
-  'prismals',
-  'sumneko_lua',
+  'prismasumneko_luals',
+  'lua_ls',
   'tailwindcss',
 }
 
@@ -24,7 +24,7 @@ require 'mason-lspconfig'.setup {
 }
 
 -- Set up lspconfig.
-local capabilities = require 'cmp_nvim_lsp'.update_capabilities(
+local capabilities = require 'cmp_nvim_lsp'.default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 local nvim_lsp = require 'lspconfig'

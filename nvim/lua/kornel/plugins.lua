@@ -93,10 +93,12 @@ return packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- vim-fugitive written in Lua
   use 'lewis6991/gitsigns.nvim' -- git decorations
 
-  use({
-    'iamcco/markdown-preview.nvim',
-    run = function() vim.fn['mkdp#util#install']() end,
-  })
+  use {'iamcco/markdown-preview.nvim'}
+  -- use({
+
+  --   'iamcco/markdown-preview.nvim',
+  --   run = function() vim.fn['mkdp#util#install']() end,
+  -- })
 
   use 'kyazdani42/nvim-web-devicons'
 
@@ -110,4 +112,15 @@ return packer.startup(function(use)
         -- vim.cmd('colorscheme rose-pine')
     end
   })
+  use 'navarasu/onedark.nvim'
+  use { 
+  'olivercederborg/poimandres.nvim',
+  config = function()
+    require('poimandres').setup {
+      -- leave this setup function empty for default config
+      -- or refer to the configuration section
+      -- for configuration options
+    }
+  end
+}
 end)
